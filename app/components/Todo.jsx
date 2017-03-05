@@ -4,12 +4,12 @@ var PropTypes = React.PropTypes;
 var Todo = React.createClass({
 
   render (){
-    var {text, id} = this.props;
+    var {text, id, completed} = this.props;
     return (
       <div>
-        <p>
-          {id}: {text}
-        </p>
+        <label>
+          <input type="checkbox" checked={completed} onChange={() => { this.props.onToggle(id) }} /> {text}
+        </label>
       </div>
     );
   }
