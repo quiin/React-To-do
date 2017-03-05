@@ -22,5 +22,5 @@ describe('Todo', () =>{
     TestUtils.Simulate.change($el.find('input')[0]);
     expect(spy).toHaveBeenCalledWith(dummyTodo.id);
   });
-
+  
 });
